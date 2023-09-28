@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">  
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="/css/trans.css">
+    <link rel="icon" type="image/x-icon" href="/pics/trans.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="details"><h2>Welcome <%= name.fullname %></h2>
+    <a href="login">LOGOUT</a>
+    </div>
+ <div class="total">
+    <h1 id="heading">Hello <%= name.fullname %>, Let's Translate your text..</h1>
+      <div class="container">
+        <div class="wrapper">
+          <div class="text-input">
+            <textarea spellcheck="false" class="from-text" placeholder="Enter text" name="from"></textarea>
+            <textarea spellcheck="false" class="to-text" placeholder="Translation" name="to"></textarea>
+          </div>
+          <ul class="controls">
+            <li class="row from">
+              <div class="icons">
+                <i id="from" class="fas fa-volume-up"></i>
+                <i id="from" class="fas fa-copy"></i>
+              </div>
+              <select></select>
+            </li>
+            <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+            <li class="row to">
+              <select></select>
+              <div class="icons">
+                <i id="to" class="fas fa-volume-up"></i>
+                <i id="to" class="fas fa-copy"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="button">Translate Text</button>
+      </div>
+    </div>
+    <script src="/js/trans_cont.js"></script>
+    <script src="/js/trans_final.js"></script>
+  </body>
+</html>

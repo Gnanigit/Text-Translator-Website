@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+</head>
+<body>
+    <section class="side">
+        <img src="/pics/login.svg" alt="side iamge">
+    </section>
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Welcome back</p>
+            <div class="seperator"></div>
+            <p class="welcome-msg">Please, provide login credential to proceed and have access to all our servicess</p>
+            <form method="POST" action="/loginsubmit" class="login-form">
+                <div class="errors"><%= errors.overall %></div>
+                <div class="errors"><%= errors.Email %></div>
+                <div class="form-control">
+                    <input type="text" name="Email" placeholder="Email" >
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="errors"><%= errors.Password %></div>
+                <div class="form-control">
+                    <input type="password" name="Password" placeholder="Password" >
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button class="submit">Login</button>
+                <p class="welcome-msg">if you not registered first <a href="signup">Signup</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

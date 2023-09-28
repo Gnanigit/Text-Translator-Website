@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Signup Page</title>
+</head>
+<body>
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Sign Up</p>
+            <div class="seperator"></div>
+    <form method="POST" action="/signupsubmit" class="login-form">
+        <div id="main"><%= errors.emailExists %></div> 
+        <div class="errors"><%= errors.Fullname %></div> 
+        <div class="form-control">
+            <input type="text" name="Username" placeholder="Username">
+            <i class="fas fa-user"></i>
+        </div>
+
+        <div class="errors"><%= errors.Email %></div> 
+        <div class="form-control">
+            <input type="email" name="Email" placeholder="Email">
+            <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="errors"><%= errors.Password %></div> 
+        <div class="form-control">
+            <input type="password" name="Password" placeholder="Password">
+            <i class="fas fa-lock"></i>
+        </div>
+    
+        <div class="errors"><%= errors.Re_Password %></div> 
+        <div class="form-control">
+            <input type="password" name="Re_Password" placeholder="Re-enter Password">
+            <i class="fas fa-lock"></i>
+        </div>
+        
+        <button class="submit">Signup</button>
+    </form>
+        </div>
+    </section>
+    <section class="side">
+        <img src="/pics/signup.svg" alt="side image">
+    </section>
+</body>
+</html>
